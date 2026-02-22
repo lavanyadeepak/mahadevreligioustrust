@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahadev Religious Trust | Sri Patabhishega Ramar Sametha Baktha Navagraha Anjaneyar Temple</title>
+    <meta name="description" content="Sri Patabhishega Ramar Sametha Baktha Navagraha Anjaneyar Temple. Join our sacred initiative to restore the temple. We are dedicated to spiritual practices, education, and community service.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+    <style>
+        :root {
+            --primary-color: #D35400; /* Saffron/Pumpkin */
+            --secondary-color: #FDF2E9; /* Light Cream */
+            --accent-color: #F1C40F; /* Gold */
+            --text-color: #2C3E50; /* Dark Blue/Grey */
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/image01.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 8rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+            color: var(--white);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        /* Tamil Text */
+        .tamil-text {
+            font-family: 'Noto Sans Tamil', sans-serif;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Donate */
+        .donate-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .bank-details {
+            text-align: left;
+            display: inline-block;
+            margin-top: 1rem;
+            font-family: monospace;
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.5);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: #bdc3c7;
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        .social-icons {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Mahadev Religious Trust</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Sri Patabhishega Ramar Sametha Baktha Navagraha Anjaneyar Temple</h1>
+        <p>Be part of the sacred initiative to restore the temple to its former magnificence. We are dedicated to teaching and spreading spiritual practices, education, and community service.</p>
+        <a href="#donate" class="btn">Support the Renovation</a>
+    </section>
+
+    <section id="about" class="section">
+        <div class="grid-2">
+            <div class="card">
+                <h2>Our Mission</h2>
+                <p>We are dedicated to teaching and spreading spiritual practices, education, and community service. We aim to promote peace, compassion, and devotion in society.</p>
+                <p>We are requesting your charitable support. Your donations will be greatly appreciated and help us restore and renovate this sacred space for future generations.</p>
+            </div>
+            <div class="card tamil-text">
+                <h2>கோவில் தெய்வங்கள்</h2>
+                <p>கோவிலின் பிரதான தெய்வமாக ஶ்ரீ பட்டாபிஷேகராமர் ஸ்மேத 9 நவகிரஹங்கள் மற்றும் 27 நட்சத்திரங்களையும் தன் வாலில் உள்ளடக்கிய ஶ்ரீ பக்த நவக்கிரஹ ஆஞ்சநேயர் அருள்பாலிக்கின்றார்.</p>
+                <p>ஶ்ரீ லக்ஷ்மி நாராயணர், ஶ்ரீ லக்ஷ்மி ஹயக்கிரிவர், ஶ்ரீ தன்வந்திரி, ஶ்ரீ விஷ்ணு துர்க்கை, தியான ஆஞ்சநேயர் ஆகியோருக்கும் தனித்தனி சன்னதிகள் இக்கோவில் அமைக்கப்பட்டுள்ளன.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #fff;">
+        <h2 class="section-title">Worship & Timings</h2>
+        <div class="card tamil-text" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h3>வழிபாடுகள்</h3>
+            <p>தினந்தோறும் காலை 7.30 முதல் 9.30 மணி வரையிலும், மாலையில் 5.30 முதல் இரவு 6.30 மணி வரையிலும் பூஜைகள் நடைபெறும்.</p>
+            <p>விசேஷ நாட்களில் சிறப்பு பூஜைகளும் நடத்தப்படுகிறது. குறிப்பாக வியாழன் மற்றும் சனி ஆகிய நாட்களில் ஆஞ்சநேயருக்கு சிறப்பு அலங்காரங்கள் நடைபெறும்.</p>
+            <p>சிறப்பு நாட்களில் கோவில் சார்பாக அன்னதானமும் வழங்கப்படுகிறது.</p>
+        </div>
+    </section>
+
+    <section id="history" class="section">
+        <h2 class="section-title">Temple History</h2>
+        <div class="grid-2">
+            <div class="tamil-text">
+                <h3>தலவரலாறு</h3>
+                <p>கலியுகத்தில் இறைவனை பக்தியின் வழியாக மட்டுமே காண இயலும் என்ற தத்துவத்தை மக்களிடத்தில் உணர்த்தும் வண்ணம் இராம பக்தியினை என்றென்றும் பக்தி மார்க்கமாக தியானித்து நம் யுகத்திலும் சிரஞ்சீவியாக காட்சியளிக்கின்றார்.</p>
+                <p>108 திவ்ய தேசங்கள் உள்ளடக்கிய, 40 சோழநாட்டுத் திருப்பதிகளில் ஒன்றான கும்பகோணம் அருகில் அமைந்துள்ள ஶ்ரீ ஆதனூரில் அருள்பாலிக்கும் ஆஞ்சநேயர், 27 நட்சத்திரங்கள், 9 நவகிரஹங்கள், 12 ராசிகள் ஆகியவற்றை தன் வாலில் உள்ளடக்கி காட்சியளிக்கிறார்.</p>
+                <p>அதேப்போன்ற அமைப்பினையும் உள்ளடக்கத்தினையும் கொண்டு மரகத கல்லினால் செய்யப்பட்ட ஆஞ்சநேயரே ஏகம்பரச்சத்தரத்தில் கை கூப்பி நின்ற மாத்திரத்தில் மக்களைப் பார்த்தவாறு ஶ்ரீ பக்த நவக்ரஹ ஆஞ்சநேய ஸ்வாமியாக காட்சியளிக்கின்றார்.</p>
+            </div>
+            <div>
+                <img src="assets/images/image02.jpg" alt="Temple Idol" style="width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+            </div>
+        </div>
+        <div class="card tamil-text" style="margin-top: 2rem;">
+            <h3>கோவிலின் மகிமை</h3>
+            <p>திருவள்ளூர் மாவட்டத்தில் அமைந்துள்ள ஶ்ரீ பக்த நவக்ரஹ ஆஞ்சநேயர் திருக்கோவில், முக்கியப் புண்ணியத் தலங்களில் ஒன்றாகத் திகழுகின்றது.</p>
+            <p>கணவன் மனைவிக்கு இடையிலான பிரச்சனைகளை தீர்க்கும் ஆற்றல் பெற்றவர் ஆஞ்சநேயர். இராமாயணக் காவியத்தின் படி, இராமர் கொடுத்த கணையாளியினை சீதையிடம் காண்பித்து இருவரையும் இணைக்கும் இணைப்பு பாலமாக ஆஞ்சநேயர் விளங்கியிருக்கின்றார்.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Gallery 01 Images -->
+            <div class="gallery-item"><img src="assets/images/gallery01/1112d11a.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery01/f06be912.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery01/22bf100a.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery01/413bac12.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery01/3a260b54.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery01/577907e0.jpg" alt="Temple Gallery"></div>
+            <!-- Gallery 02 Images -->
+            <div class="gallery-item"><img src="assets/images/gallery02/b399814a.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery02/10a17a41.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery02/894ab525.jpg" alt="Temple Gallery"></div>
+            <!-- Gallery 03 Images -->
+            <div class="gallery-item"><img src="assets/images/gallery03/933d55cc.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery03/d388b1b1.jpg" alt="Temple Gallery"></div>
+            <div class="gallery-item"><img src="assets/images/gallery03/b74a6309.jpg" alt="Temple Gallery"></div>
+        </div>
+    </section>
+
+    <section id="videos" class="section" style="background-color: #fff;">
+        <h2 class="section-title">Videos</h2>
+        <div class="grid-3">
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/3UA0_8oGlmk?rel=0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/8AuIrR28cPY?rel=0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/EY8iP6B0d5o?rel=0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="section">
+        <div class="donate-box">
+            <h2>Support Our Cause</h2>
+            <p class="tamil-text" style="font-size: 1.2rem; margin: 1rem 0;">உங்க small contribution kovil-க்கு big blessing ஆக மாறும்</p>
+            <p>Your small contribution makes a big difference. இன்றே temple renovation-க்கு உங்க support கொடுங்க 🙏</p>
+            
+            <div class="bank-details">
+                <strong>Account Name:</strong> Mahadev Religious Trust<br>
+                <strong>Account Number:</strong> 200002809740<br>
+                <strong>Account Type:</strong> Current Account<br>
+                <strong>Bank Branch:</strong> Surapet<br>
+                <strong>IFSC Code:</strong> ESFB0001134<br>
+                <strong>MICR Code:</strong> 600756028<br>
+                <strong>Gpay Number:</strong> 8940200030
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="grid-2" style="text-align: left; max-width: 1000px; margin: 0 auto;">
+            <div>
+                <h3>Registered Office</h3>
+                <p>10, 1st St, Kodungaiyur (East),<br>Vasuki Nagar, Kodungaiyur,<br>Chennai, Tamil Nadu 600118</p>
+            </div>
+            <div>
+                <h3>Temple Address</h3>
+                <p>No. 33, Egambara Chathiram,<br>Avadi, Pandeswaram,<br>Tamil Nadu 600055</p>
+                <p><a href="https://share.google/wdbdgYgPdtgRRgXFo" target="_blank"><i class="fas fa-map-marker-alt"></i> View on Map</a></p>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://wa.me/9094242932" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@MahadevReligiousTrust" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/mahadevreligioustrust" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61571463001174" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:mahadevreligioustrust@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <p><strong>Contact:</strong> Sanjay Kumar - 9094242932 | Prabhakaran - 9840823546</p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2024 Mahadev Religious Trust. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
